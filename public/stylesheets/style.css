@@ -12,21 +12,20 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
+  background-color: #000000;
   color: #f6f6f6;
-  /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
+  /* Use montserrat font, if none are available use any found sans-sarif font */
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
 
 nav {
-  background-color: #f6f6f6;
+  background-color: #FF00FF;
   color: #1a1a1a;
   display: flex;
   align-items: center;
   padding: 10px;
-  min-height: 60px;
+  min-height: 45px;
 }
 
 main {
@@ -34,8 +33,18 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .right {
   margin-left: auto;
+}
+
+#profile-photo{
+  border-radius: 50%;
+}
+
+#logout{
+  background-color: #29ABE2;
+  color: #000000;
 }

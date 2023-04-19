@@ -2,10 +2,10 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>Hello, <%= user ? user.profile.name : "" %> <br>Welcome to EVELO Finance.</h1>
   <% if (user?.profile.avatar) { %>
     <div>
-      <img
+      <img id="profile-photo"
         src="<%= user.profile.avatar %>"
         alt="<%= user.profile.name %> avatar"
       />
