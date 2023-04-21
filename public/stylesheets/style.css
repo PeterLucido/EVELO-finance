@@ -48,3 +48,10 @@ main {
   background-color: #29ABE2;
   color: #000000;
 }
+
+#finance {
+  background-color: #29ABE2;
+  color: #000000;
+  margin: 10px;
+  font-size: medium;
+}
