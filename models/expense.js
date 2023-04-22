@@ -3,8 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const commentSchema = new Schema({
-  content: String,
-  date: Date,
+  comment: String,
 })
 	
 const expenseSchema = new Schema({

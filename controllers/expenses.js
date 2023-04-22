@@ -84,6 +84,22 @@ function update(req, res) {
   })
 }
 
+function createComment(req, res) {
+  Expense.findById(req.params.expenseId)
+  .then(expense => {
+    expense.comments.push(req.body)
+    expense.save()
+    .then(() => {
+      res.redirect(`/expenses/${expense._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/expenses')
+  })
+}
+
+
 export {
   newExpense as new,
   create,
@@ -92,4 +108,5 @@ export {
   deleteExpense as delete,
   edit,
   update,
+  createComment,
 }

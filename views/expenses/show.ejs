@@ -13,6 +13,36 @@
     <div><%= expense.category %></div>
     <div>Cost: </div>
     <div><%= expense.amount %></div>
+
+    <h2>Comments</h2>
+  <form 
+    id="add-comment-form"
+    action="/expenses/<%= expense._id %>/comments"
+    method="POST"
+  >
+    <label for="comment-input">Comment:</label>
+    <input name="comment" id="comment-input"></input>
+
+    <button type="submit">Add Comment</button>
+  </form>
+  <% if (expense.comment) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% expense.comments.forEach(function(comment) { %>
+          <tr>
+            <td><%= comment.comment %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h3>No Comments Yet</h3>
+  <% } %>
 </main>
   
 <%- include('../partials/footer') %>
