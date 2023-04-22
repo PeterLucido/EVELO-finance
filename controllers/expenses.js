@@ -12,10 +12,13 @@ function create(req, res) {
   for (let key in req.body) {
     if (req.body[key] === "") delete req.body[key]
   }
-  const expense = new Expense(req.body)
-  expense.save(function (err) {
-    if (err) return res.redirect("/expense/new")
-    res.redirect("/expense")
+  Expense.create(req.body)
+  .then(expense => {
+    res.redirect(`/expenses/${expense._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/expenses/new')
   })
 }
 
