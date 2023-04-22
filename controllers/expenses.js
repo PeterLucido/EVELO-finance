@@ -84,7 +84,7 @@ function update(req, res) {
   })
 }
 
-function createComment(req, res) {
+function createComments(req, res) {
   Expense.findById(req.params.expenseId)
   .then(expense => {
     expense.comments.push(req.body)
@@ -108,5 +108,5 @@ export {
   deleteExpense as delete,
   edit,
   update,
-  createComment,
+  createComments,
 }
