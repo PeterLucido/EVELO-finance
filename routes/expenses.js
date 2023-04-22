@@ -10,6 +10,7 @@ router.get('/:expenseId', expensesCtrl.show)
 router.get('/:expenseId/edit', expensesCtrl.edit)
 router.post('/create', expensesCtrl.create)
 router.delete('/:expenseId', expensesCtrl.delete)
+router.put('/:expenseId', expensesCtrl.update)
 
 
 export { router }

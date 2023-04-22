@@ -73,6 +73,17 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  Expense.findByIdAndUpdate(req.params.expenseId, req.body, {new: true})
+  .then(expense => {
+    res.redirect(`/expenses/${expense._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/expenses')
+  })
+}
+
 export {
   newExpense as new,
   create,
@@ -80,5 +91,5 @@ export {
   show,
   deleteExpense as delete,
   edit,
-  
+  update,
 }
