@@ -59,11 +59,26 @@ function deleteExpense(req, res) {
   })
 }
 
+function edit(req, res) {
+  Expense.findById(req.params.expenseId)
+  .then(expense => {
+    res.render('expenses/edit', {
+      expense,
+      title: 'Edit Expense',
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/expenses')
+  })
+}
+
 export {
   newExpense as new,
   create,
   index,
   show,
   deleteExpense as delete,
-
+  edit,
+  
 }

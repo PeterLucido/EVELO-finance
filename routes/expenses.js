@@ -7,6 +7,7 @@ const router = Router()
 router.get('/', expensesCtrl.index)
 router.get('/new', expensesCtrl.new)
 router.get('/:expenseId', expensesCtrl.show)
+router.get('/:expenseId/edit', expensesCtrl.edit)
 router.post('/create', expensesCtrl.create)
 router.delete('/:expenseId', expensesCtrl.delete)
 
