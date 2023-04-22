@@ -2,7 +2,11 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Hello, <%= user ? user.profile.name : "" %> <br>Welcome to EVELO Finance.</h1>
+
+  <div>
+    <h1>Welcome to E-VELO Finance. <br><%= user ? user.profile.name : "" %></h1>
+  </div>
+
   <% if (user?.profile.avatar) { %>
     <div>
       <img id="profile-photo"
@@ -11,8 +15,10 @@
       />
     </div>
   <% } %>
-  <div>
-    <button id="finance">Finances</button>
+  <% if (user) { %>
+    <h2>Hit enter to continue to your finances.</h2>
+    <button id="enter">Enter</button>
+  <% } %>
   </div>
 </main>
 

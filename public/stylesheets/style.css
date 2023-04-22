@@ -19,13 +19,22 @@ body {
   margin: 0;
 }
 
+/* alight the nav bar items in the center evenly */
 nav {
-  background-color: #FF00FF;
-  color: #1a1a1a;
+  background-color: #000000;
+  color: #ffffff;
   display: flex;
-  align-items: center;
-  padding: 10px;
+  
+  padding: 5px;
   min-height: 45px;
+}
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 1px;
+  color: #FF00FF;
 }
 
 main {
@@ -40,18 +49,19 @@ main {
   margin-left: auto;
 }
 
-#profile-photo{
+#profile-photo {
   border-radius: 50%;
 }
 
-#logout{
+#logout {
   background-color: #29ABE2;
   color: #000000;
 }
 
-#finance {
+#enter {
   background-color: #29ABE2;
   color: #000000;
   margin: 10px;
   font-size: medium;
 }
+

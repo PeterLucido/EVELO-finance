@@ -5,9 +5,23 @@
 <body>
   <nav>
     <% if (user) { %>
-      <a href="/auth/logout" class="right">
+      <a 
+      href="/expense/new" class=<%= title === 'Add Expense' ? 'active' : '' %>
+    >
+      ADD EXPENSE
+    <a 
+      href="/expense" class=<%= title === 'All Expenses' ? 'active' : '' %>
+    >
+      ALL EXPENSES
+      
+      <!-- <a href="/auth/logout" class="right">
         <button id="logout" type="submit">Logout</button>
-      </a>
+      </a> -->
+
+      <span class="<%= title === 'Log Out' ? 'active' : '' %>">
+        <a href="/auth/logout">LOG OUT</a>
+      </span>
+
     <% } else { %>
       <div 
         id="g_id_onload"
