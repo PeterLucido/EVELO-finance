@@ -92,6 +92,10 @@ function createComments(req, res) {
     .then(() => {
       res.redirect(`/expenses/${expense._id}`)
     })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/expenses')
+    })
   })
   .catch(err => {
     console.log(err)
