@@ -102,6 +102,24 @@ function createComments(req, res) {
     res.redirect('/expenses')
   })
 }
+function deleteComments(req, res) {
+  Expense.findById(req.params.expenseId)
+  .then(expense => {
+    expense.comments.remove(req.params.commentId)
+    expense.save()
+    .then(() => {
+      res.redirect(`/expenses/${expense._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/expenses')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/expenses')
+  })
+}
 
 
 export {
@@ -113,4 +131,5 @@ export {
   edit,
   update,
   createComments,
+  deleteComments,
 }

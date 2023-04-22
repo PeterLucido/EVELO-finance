@@ -11,6 +11,7 @@ router.get('/:expenseId/edit', expensesCtrl.edit)
 router.post('/create', expensesCtrl.create)
 router.post('/:expenseId/comments', expensesCtrl.createComments)
 router.delete('/:expenseId', expensesCtrl.delete)
+router.delete('/:expenseId/comments/:commentId', expensesCtrl.deleteComments)
 router.put('/:expenseId', expensesCtrl.update)
 
 
