@@ -3,18 +3,15 @@ import { Expense } from "../models/expense.js"
 
 
 function newExpense(req, res) {
-  res.render("expense/new", {
+  res.render("expenses/new", {
     title: "Add Expense",
   })
 }
 
 function create(req, res) {
-  for (let key in req.body) {
-    if (req.body[key] === "") delete req.body[key]
-  }
   Expense.create(req.body)
   .then(expense => {
-    res.redirect(`/expenses/${expense._id}`)
+    res.redirect('/expenses')
   })
   .catch(err => {
     console.log(err)
@@ -22,8 +19,37 @@ function create(req, res) {
   })
 }
 
+function index(req, res) {
+  Expense.find({})
+  .then(expenses => {
+    res.render('expenses/index', {
+      expenses,
+      title: "All Expenses",
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/expenses/new')
+  })
+}
+
+function show(req, res) {
+  Expense.findById(req.params.expenseId)
+  .then(expense => {
+    res.render('expenses/show', {
+      expense: expense,
+      title: 'Expense Details',
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/expenses')
+  })
+}
 
 export {
   newExpense as new,
   create,
+  index,
+  show,
 }

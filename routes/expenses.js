@@ -4,8 +4,10 @@ import * as expensesCtrl from '../controllers/expenses.js'
 const router = Router()
 
 // GET /expense/new
+router.get('/', expensesCtrl.index)
 router.get('/new', expensesCtrl.new)
-// POST /expense
-router.post('/', expensesCtrl.create)
+router.get('/:expenseId', expensesCtrl.show)
+router.post('/create', expensesCtrl.create)
+
 
 export { router }

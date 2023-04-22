@@ -1,0 +1,18 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/expenses/show.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <section>
+    <%= expense.title %>
+    <a href="/expenses/<%= expense._id %>/edit">
+      <button>Edit Expense</button>
+    </a>
+    <div>Expense: </div>
+    <div><%= expense.category %></div>
+    <div>Cost: </div>
+    <div><%= expense.amount %></div>
+</main>
+  
+<%- include('../partials/footer') %>

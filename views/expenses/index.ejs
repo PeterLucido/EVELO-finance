@@ -1,0 +1,31 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/expenses/index.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>Expenses</h1>
+  <table id="list">
+    <thead>
+      <tr>
+        <th>Expense</th>
+        <th>Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% expenses.forEach((expense) => { %>
+      <tr>
+        <td><%= expense.category %></td>
+        <td><%= expense.amount %></td>
+        <td><a href="/expenses/<%= expense._id %>">DETAILS</a></td>
+        <td>
+          <form action="/expenses/<%= expense._id %>?_method=DELETE" method="POST">
+            <button type="submit">X</button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</main>
+
+<%- include('../partials/footer') %>

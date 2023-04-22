@@ -6,17 +6,14 @@
   <nav>
     <% if (user) { %>
       <a 
-      href="/expense/new" class=<%= title === 'Add Expense' ? 'active' : '' %>
+      href="/expenses/new" class=<%= title === 'Add Expense' ? 'active' : '' %>
     >
       ADD EXPENSE
     <a 
-      href="/expense" class=<%= title === 'All Expenses' ? 'active' : '' %>
+      href="/expenses" class=<%= title === 'All Expenses' ? 'active' : '' %>
     >
       ALL EXPENSES
       
-      <!-- <a href="/auth/logout" class="right">
-        <button id="logout" type="submit">Logout</button>
-      </a> -->
 
       <span class="<%= title === 'Log Out' ? 'active' : '' %>">
         <a href="/auth/logout">LOG OUT</a>
