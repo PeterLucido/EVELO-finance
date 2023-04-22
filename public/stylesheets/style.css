@@ -68,3 +68,12 @@ main {
 #total-expenses{
   right: 20%;
 }
+
+.comment-row {
+  display: flex;
+  align-items: center;
+}
+
+.delete-button {
+  margin-left: 10px;
+}

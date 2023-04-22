@@ -9,10 +9,15 @@
     <a href="/expenses/<%= expense._id %>/edit">
       <button>Edit Expense</button>
     </a>
-    <div>Expense: </div>
-    <div><%= expense.category %></div>
-    <div>Cost: </div>
-    <div><%= expense.amount %></div>
+    <div class="expense-item">
+      <div class="label">Expense:</div>
+      <div><%= expense.category %></div>
+    </div>
+    <div class="expense-item">
+      <div class="label">Cost:</div>
+      <div><%= expense.amount %></div>
+    </div>
+
 
     <h2>Comments</h2>
   <form 
@@ -36,9 +41,11 @@
         <% expense.comments.forEach(function(comment) { %>
           <tr>
             <td><%= comment.comment %></td>
+            <td>
             <form action="/expenses/<%= expense._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
               <button>X</button>
             </form>
+          </td>
           </tr>
         <% }) %>
       </tbody>

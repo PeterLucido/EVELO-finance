@@ -26,7 +26,18 @@
       <% }) %>
     </tbody>
   </table>
-      
+  <div>
+    <h2>Total Spend:</h2>
+    <p>
+      <% 
+        let totalSpend = 0;
+        expenses.forEach((expense) => { 
+          totalSpend += parseInt(expense.amount);
+        });
+      %>
+      $<%= totalSpend %>
+    </p>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
