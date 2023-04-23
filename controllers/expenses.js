@@ -9,6 +9,7 @@ function newExpense(req, res) {
 }
 
 function create(req, res) {
+  req.body.owner = req.user.profile._id
   Expense.create(req.body)
   .then(expense => {
     res.redirect('/expenses')
@@ -47,7 +48,7 @@ function show(req, res) {
   })
 }
 
-// function to delete an expense
+
 function deleteExpense(req, res) {
   Expense.findByIdAndDelete(req.params.expenseId)
   .then(expense => {
