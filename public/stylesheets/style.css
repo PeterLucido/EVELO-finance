@@ -70,14 +70,14 @@ table {
 }
 
 table th {
-  padding: 10px;
+  padding: 5px;
   border-bottom: 2px solid #FF00FF;
   text-align: center;
 }
 
 table td {
   padding: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 form * {
@@ -127,6 +127,11 @@ a {
 }
 
 .comments {
+  padding: 10px;
+  border-bottom: 2px solid #FF00FF;
+}
+
+h2 {
   padding: 10px;
   border-bottom: 2px solid #FF00FF;
 }
