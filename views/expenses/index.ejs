@@ -4,7 +4,7 @@
 
 <main>
   <h1>Expenses</h1>
-  <table id="list">
+  <table>
     <thead>
       <tr>
         <th>Expense</th>
@@ -16,7 +16,7 @@
       <tr>
         <td><%= expense.category %></td>
         <td><%= expense.amount %></td>
-        <td><a href="/expenses/<%= expense._id %>">DETAILS</a></td>
+        <td><a href="/expenses/<%= expense._id %>">Details</a></td>
         <td>
           <form action="/expenses/<%= expense._id %>?_method=DELETE" method="POST">
             <button class="deleteBtn" type="submit">X</button>
