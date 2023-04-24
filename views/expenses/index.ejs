@@ -19,7 +19,7 @@
         <td><a href="/expenses/<%= expense._id %>">DETAILS</a></td>
         <td>
           <form action="/expenses/<%= expense._id %>?_method=DELETE" method="POST">
-            <button type="submit">X</button>
+            <button class="deleteBtn" type="submit">X</button>
           </form>
         </td>
       </tr>
@@ -30,10 +30,10 @@
     <h2>Total Spend:</h2>
     <p>
       <% 
-        let totalSpend = 0;
+        let totalSpend = 0
         expenses.forEach((expense) => { 
-          totalSpend += parseInt(expense.amount);
-        });
+          totalSpend += parseInt(expense.amount)
+        })
       %>
       $<%= totalSpend %>
     </p>

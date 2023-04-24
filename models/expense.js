@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const commentSchema = new Schema({
-  comment: String,
+  comment: {type: String, required: true} 
 })
 	
 const expenseSchema = new Schema({

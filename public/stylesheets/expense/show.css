@@ -1,4 +1,4 @@
-ul {
+/* ul {
   margin: 0 0 16px;
   padding: 0;
   list-style: none;
@@ -13,7 +13,7 @@ table {
 }
 
 table thead th {
-  padding: 5px;
+  padding: 30px;
   border-bottom: 2px solid #FF00FF;
 }
 
@@ -27,6 +27,7 @@ form * {
   border-radius: 5px;
 }
 
+
 section {
   display: grid;
   grid-template-columns: auto auto;
@@ -38,10 +39,11 @@ section div:nth-child(even) {
 }
 
 
-.expense-item {
+#expense-item {
   display: flex;
   align-items: center;
 }
-.label {
+
+label {
   margin-right: 5px;
-}
+}  */

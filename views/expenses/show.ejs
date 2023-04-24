@@ -6,35 +6,33 @@
   <h1><%= title %></h1>
   <section>
     <%= expense.title %>
+    <div>
     <a href="/expenses/<%= expense._id %>/edit">
       <button>Edit Expense</button>
     </a>
+  </div>
     <div class="expense-item">
-      <div class="label">Expense:</div>
+      <div class="label">Expense: </div>
       <div><%= expense.category %></div>
     </div>
     <div class="expense-item">
-      <div class="label">Cost:</div>
+      <div class="label">Cost: </div>
       <div><%= expense.amount %></div>
     </div>
-
-
-    <h2>Comments</h2>
   <form 
-    id="add-comment-form"
+    id="form"
     action="/expenses/<%= expense._id %>/comments"
     method="POST"
   >
     <label for="comment-input"></label>
     <input name="comment" id="comment-input"></input>
-
     <button type="submit">Add Comment</button>
   </form>
   <% if (expense.comments.length > 0) { %>
-    <table>
+    <table id="comments-table">
       <thead>
         <tr>
-          <th>Comment</th>
+          <th>Comments</th>
         </tr>
       </thead>
       <tbody>
@@ -43,7 +41,7 @@
             <td><%= comment.comment %></td>
             <td>
             <form action="/expenses/<%= expense._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-              <button>X</button>
+              <button class="deleteBtn">X</button>
             </form>
           </td>
           </tr>

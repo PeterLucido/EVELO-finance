@@ -50,7 +50,6 @@ function show(req, res) {
   })
 }
 
-
 function deleteExpense(req, res) {
   Expense.findByIdAndDelete(req.params.expenseId)
   .then(expense => {
@@ -97,7 +96,7 @@ function createComments(req, res) {
     })
     .catch(err => {
       console.log(err)
-      res.redirect('/expenses')
+      res.redirect(`/expenses/${expense._id}`)
     })
   })
   .catch(err => {

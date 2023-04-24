@@ -23,19 +23,21 @@ body {
 nav {
   background-color: #000000;
   color: #ffffff;
+  border-bottom: 2px solid #FF00FF;
   display: flex;
-  
   padding: 5px;
   min-height: 45px;
 }
 
 nav > a {
-  margin: 20px;
+  margin: 8px;
+  margin-left: auto;
   text-decoration: none;
   padding: 5px;
   border-radius: 1px;
   color: #FF00FF;
 }
+
 
 main {
   display: flex;
@@ -53,27 +55,91 @@ main {
   border-radius: 50%;
 }
 
-#logout {
-  background-color: #29ABE2;
-  color: #000000;
+ul {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
 }
 
-#enter {
-  background-color: #29ABE2;
-  color: #000000;
-  margin: 10px;
-  font-size: medium;
+li {
+  font-weight: bold;
 }
 
-#total-expenses{
-  right: 20%;
+table {
+  font-size: 20px;
 }
 
-.comment-row {
+table th {
+  padding: 10px;
+  border-bottom: 2px solid #FF00FF;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+form * {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+section {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 16px;
+}
+
+section div:nth-child(even) {
+  font-weight: bold;
+}
+
+
+.expense-item {
   display: flex;
   align-items: center;
+  text-align: left;
+  padding-inline: 5px;
 }
 
-.delete-button {
-  margin-left: 10px;
+#comments-table{
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  padding: 10px;
+  border-bottom: 2px solid #FF00FF;
+}
+
+form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 100px));
+  font-size: 20px;
+  text-align: left;
+}
+
+form * {
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+form > button {
+  /* grid-column: span 2; */
+  justify-self: center;
+  width: auto;
+  margin-left: auto;
+  font-size: 15px;
+  color: black;
+  background-color: #29ABE2;
+}
+
+.deleteBtn {
+  width: 25px;
+  height: 25px;
 }
