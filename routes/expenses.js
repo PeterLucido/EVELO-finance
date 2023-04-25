@@ -16,5 +16,4 @@ router.delete('/:expenseId', isLoggedIn, expensesCtrl.delete)
 router.delete('/:expenseId/comments/:commentId', isLoggedIn, expensesCtrl.deleteComments)
 router.put('/:expenseId', isLoggedIn, expensesCtrl.update)
 
-
 export { router }

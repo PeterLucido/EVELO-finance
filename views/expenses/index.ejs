@@ -32,10 +32,10 @@
       <% 
         let totalSpend = 0
         expenses.forEach((expense) => { 
-          totalSpend += parseInt(expense.amount)
+          totalSpend += (expense.amount)
         })
       %>
-      $<%= totalSpend %>
+      $<%= totalSpend.toFixed(2) %>
       </h3>
   </div>
 </main>

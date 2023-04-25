@@ -1,7 +1,5 @@
 import { Expense } from "../models/expense.js"
 
-
-
 function newExpense(req, res) {
   res.render("expenses/new", {
     title: "Add Expense",
@@ -104,6 +102,7 @@ function createComments(req, res) {
     res.redirect('/expenses')
   })
 }
+
 function deleteComments(req, res) {
   Expense.findById(req.params.expenseId)
   .then(expense => {
@@ -122,7 +121,6 @@ function deleteComments(req, res) {
     res.redirect('/expenses')
   })
 }
-
 
 export {
   newExpense as new,
