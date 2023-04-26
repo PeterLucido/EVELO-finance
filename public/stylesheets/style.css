@@ -2,24 +2,19 @@ html {
   box-sizing: border-box;
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
+*, 
+*::before, 
 *::after {
-  /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
 }
 
 body {
   background-color: #000000;
   color: #f6f6f6;
-  /* Use montserrat font, if none are available use any found sans-sarif font */
   font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
 
-/* alight the nav bar items in the center evenly */
 nav {
   display: flex;
   align-items: center;
@@ -45,14 +40,6 @@ nav > a {
   text-decoration: none;
   font-size: 16px;
   color: #424748;
-}
-
-#list a:visited{
-  color: #424748;
-}
-
-#list a:hover {
-  background-color: white;
 }
 
 main {
@@ -101,7 +88,6 @@ form * {
   border-radius: 5px;
 }
 
-
 section {
   display: grid;
   grid-template-columns: auto;
@@ -111,7 +97,6 @@ section {
 section div:nth-child(even) {
   font-weight: bold;
 }
-
 
 .expense-item {
   display: flex;
@@ -130,7 +115,6 @@ table > th {
 
 #comments-table{
   display: grid;
-  /* grid-template-columns: 1; */
 }
 
 h1 {
