@@ -9,7 +9,8 @@ const commentSchema = new Schema({
 const expenseSchema = new Schema({
   category: {type: String, required: true},
   amount: {type: Number, required: true},
-  owner: { type: Schema.Types.ObjectId, ref: 'Profile' },  comments: [commentSchema],
+  owner: { type: Schema.Types.ObjectId, ref: 'Profile' },  
+  comments: [commentSchema],
 })
 
 const Expense = mongoose.model('Expense', expenseSchema)

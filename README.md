@@ -9,6 +9,8 @@
 
 # Click [here](https://evelo-finance.fly.dev/) to open the application.
 
+# Click [here](https://trello.com/b/h2CcgQmw/finacial-project) to open the Trello planning materials.
+
 ## Object of the application
 In today's fast-paced world, it is essential to have reliable metrics to track and measure progress in various aspects of life. Without a clear understanding of where improvements are needed, it becomes nearly impossible to initiate effective changes. This finance application serves as the perfect solution, empowering you to meticulously monitor your expenses and gain valuable insights into your spending habits.
 
@@ -33,6 +35,7 @@ https://fonts.google.com/specimen/Montserrat
 * Express
 * Node
 * EJS
+* Google OAuth
 
 ## IceBox Items
 I intend to categorize expenses by month, with each month's expenses calculated in the month-over-month section. This section will display the percentage, total, and average of each individual expense. Additionally, I'd like to incorporate a net worth page to monitor debt, cash, and assets for a comprehensive view of my financial situation.

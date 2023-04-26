@@ -2,10 +2,8 @@ import { Router } from 'express'
 import * as expensesCtrl from '../controllers/expenses.js'
 import { isLoggedIn } from '../middleware/middleware.js'
 
-
 const router = Router()
 
-// GET /expense/new
 router.get('/', isLoggedIn, expensesCtrl.index)
 router.get('/new', isLoggedIn, expensesCtrl.new)
 router.get('/:expenseId', isLoggedIn, expensesCtrl.show)
