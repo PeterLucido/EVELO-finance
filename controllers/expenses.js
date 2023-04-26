@@ -5,7 +5,7 @@ function newExpense(req, res) {
     title: "Add Expense",
   })
 }
-//testing
+
 function create(req, res) {
   req.body.owner = req.user.profile._id
   Expense.create(req.body)
