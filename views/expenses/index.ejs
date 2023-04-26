@@ -4,11 +4,11 @@
 
 <main>
   <h1>Expenses</h1>
+  <div class="user-image">
+    <img id="profile-photo" src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar" />
+    <p><%= user ? user.profile.name : "" %></p>
+  </div>
   <div class="container">
-    <div class="user-image">
-      <img id="profile-photo" src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar" />
-      <p><%= user ? user.profile.name : "" %></p>
-    </div>
     <div class="content">
       <table>
         <thead>
