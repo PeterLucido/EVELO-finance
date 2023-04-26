@@ -22,7 +22,6 @@ function index(req, res) {
   const profileId = req.user.profile._id
   Expense.find({ owner: profileId })
   .then(expenses => {
-    console.log(expenses)
     res.render('expenses/index', {
       expenses,
       title: "All Expenses",
