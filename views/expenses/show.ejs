@@ -7,10 +7,10 @@
   <section>
     <%= expense.title %>
     <div>
-    <a href="/expenses/<%= expense._id %>/edit">
+      <a href="/expenses/<%= expense._id %>/edit">
       <button class="edit">Edit Expense</button>
-    </a>
-  </div>
+      </a>
+    </div>
     <div class="expense-item">
       <div>Expense:</div>
       <div class="label"><%= expense.category %></div>
@@ -21,9 +21,7 @@
     </div>
   <form 
     id="form"
-    action="/expenses/<%= expense._id %>/comments"
-    method="POST"
-  >
+    action="/expenses/<%= expense._id %>/comments" method="POST">
     <label for="comment-input"></label>
     <input name="comment" id="comment-input" placeholder="Leave a comment"></input>
     <button type="submit">Add Comment</button>
@@ -34,18 +32,18 @@
       <thead>
           <h2 class="comments">Comments</h2>
       </thead>
-      <tbody>
-        <% expense.comments.forEach(function(comment) { %>
-          <tr>
-            <td><%= comment.comment %></td>
-            <td>
-            <form action="/expenses/<%= expense._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-              <button class="deleteBtn">X</button>
-            </form>
-          </td>
-          </tr>
-        <% }) %>
-      </tbody>
+        <tbody>
+          <% expense.comments.forEach(function(comment) { %>
+            <tr>
+              <td><%= comment.comment %></td>
+              <td>
+              <form action="/expenses/<%= expense._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                <button class="deleteBtn">X</button>
+              </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
     </table>
   <% } else { %>
     <h3>No Comments Yet</h3>

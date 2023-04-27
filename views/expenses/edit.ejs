@@ -4,11 +4,7 @@
 
 <main>
   <h1><%= title %></h1>
-  <form  
-    action="/expenses/<%= expense._id %>?_method=PUT" 
-    method="POST"
-  >
-  <form action="/expenses" method="POST">
+  <form action="/expenses/<%= expense._id %>?_method=PUT" method="POST">
     <label for="expense-input">Expense:</label>
     <input type="text" name="category" id="expense-input" value="<%= expense.category %>">
     <label for="amount-input">Cost:</label>
