@@ -206,7 +206,7 @@ form > button {
   border-radius: 5px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 770px) {
   nav {
     display: flex;
     align-items: center;
