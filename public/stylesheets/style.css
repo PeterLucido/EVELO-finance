@@ -191,11 +191,13 @@ form > button {
   font-size: 15px;
   color: black;
   background-color: #29ABE2;
+  font-weight: bold;
 }
 
 .deleteBtn {
   width: 25px;
   height: 25px;
+  font-weight: bold;
 }
 
 .edit{
@@ -204,6 +206,7 @@ form > button {
   color: black;
   background-color: #29ABE2;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 @media (max-width: 770px) {
