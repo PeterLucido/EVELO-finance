@@ -138,7 +138,6 @@ table > th {
 }
 .user-image p {
   margin-top: 10px;
-  text: 15px;
 }
 .content {
   display: flex;
@@ -205,4 +204,157 @@ form > button {
   color: black;
   background-color: #29ABE2;
   border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    border-bottom: 2px solid #FF00FF;
+    min-height: 45px;
+  }
+  
+  nav > a {
+    margin: 5px;
+    justify-content: center;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 1px;
+    color: #FF00FF;
+    font-size: 8px;
+  }
+  
+  nav a:hover {
+    color: #29ABE2;
+  }
+  
+  nav a.active {
+    color: #29ABE2;
+  }
+  
+  #profile-photo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+  
+  table th {
+    border-bottom: 2px solid #FF00FF;
+    text-align: center;
+  }
+  
+  table td {
+    padding: 5px;
+    text-align: left;
+  }
+  
+  section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5px;
+  }
+  
+  .expense-item {
+    display: flex;
+    text-align: right;
+    justify-content: center;
+  }
+  
+  .label {
+    padding-left: 5px;
+  }
+  
+  #comments-table{
+    display: grid;
+  }
+  
+  .container {
+    display: flex;
+    position: relative;
+    right: 20fr;
+  }
+  
+  .user-image {
+    display: none;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    padding: 10px;
+    border-bottom: 2px solid #FF00FF;
+    font-size: 15px;
+  }
+  
+  a {
+    color: #FF00FF;
+  }
+  
+  .comments {
+    padding: 10px;
+    border-bottom: 2px solid #FF00FF;
+  }
+  
+  h2 {
+    padding: 10px;
+    border-bottom: 2px solid #FF00FF;
+    font-size: 12px;
+  }
+  
+  #welcome-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .welcome-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  #app-logo {
+    max-width: 30px;
+    height: auto;
+  }
+  
+  form * {
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+  
+  form > button {
+    justify-self: center;
+    width: auto;
+    margin-left: auto;
+    font-size: 10px;
+    color: black;
+    background-color: #29ABE2;
+  }
+  
+  #new-form{
+    display: grid;
+  }
+
+  .deleteBtn {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
+  
+  .edit{
+    font-size: 10px;
+    width: auto;
+    color: black;
+    background-color: #29ABE2;
+    border-radius: 5px;
+  }
 }
