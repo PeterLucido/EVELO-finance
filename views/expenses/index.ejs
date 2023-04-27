@@ -3,47 +3,47 @@
 <%- include('../partials/nav') %>
 
 <main>
-    <h1>Expenses</h1>
-    <div class="user-image">
-        <img id="profile-photo" src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar" />
-        <h3><%= user ? user.profile.name : "" %></h3>
+  <h1>Expenses</h1>
+  <div class="user-image">
+    <img id="profile-photo" src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar" />
+    <h3><%= user ? user.profile.name : "" %></h3>
+  </div>
+  <div class="container">
+    <div class="content">
+      <table>
+        <thead>
+          <tr>
+            <th>Expense</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% expenses.forEach((expense) => { %>
+            <tr>
+              <td><%= expense.category %></td>
+              <td>$<%= expense.amount %></td>
+              <td><a href="/expenses/<%= expense._id %>">Details</a></td>
+              <td>
+                <form action="/expenses/<%= expense._id %>?_method=DELETE" method="POST">
+                  <button class="deleteBtn" type="submit">X</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <div>
+        <h2>Total Spent:</h2>
+        <h3>
+          <% let totalSpend = 0
+          expenses.forEach((expense) => {
+              totalSpend += (expense.amount)
+          }) %>
+          $<%= totalSpend.toFixed(2) %>
+        </h3>
+      </div>
     </div>
-    <div class="container">
-        <div class="content">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Expense</th>
-                        <th>Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% expenses.forEach((expense) => { %>
-                        <tr>
-                            <td><%= expense.category %></td>
-                            <td>$<%= expense.amount %></td>
-                            <td><a href="/expenses/<%= expense._id %>">Details</a></td>
-                            <td>
-                                <form action="/expenses/<%= expense._id %>?_method=DELETE" method="POST">
-                                    <button class="deleteBtn" type="submit">X</button>
-                                </form>
-                            </td>
-                        </tr>
-                    <% }) %>
-                </tbody>
-            </table>
-            <div>
-                <h2>Total Spent:</h2>
-                <h3>
-                    <% let totalSpend = 0
-                    expenses.forEach((expense) => {
-                        totalSpend += (expense.amount)
-                    }) %>
-                    $<%= totalSpend.toFixed(2) %>
-                </h3>
-            </div>
-        </div>
-    </div>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

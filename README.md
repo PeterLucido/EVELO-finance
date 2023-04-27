@@ -26,14 +26,14 @@ Google Fonts
 https://fonts.google.com/specimen/Montserrat
 
 ## Technologies used:
-* GitHub
+* Git
 * Docker
-* HTML
 * CSS
 * JavaScript
+* Mongoose
 * MongoDB
-* Express
-* Node
+* Express.Js
+* Node.Js
 * EJS
 * Google OAuth
 
