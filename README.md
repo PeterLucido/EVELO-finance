@@ -1,6 +1,6 @@
 # E-VELO Finance Application
 
-<p {align="center"}>
+<p align="center">
 <img width="150" alt="logo" src="https://user-images.githubusercontent.com/127632779/234599864-abfebcc0-f9c4-4538-b730-47fbf4ec430f.png">
 </p>
 
@@ -11,7 +11,7 @@
 
 # Click [here](https://trello.com/b/h2CcgQmw/finacial-project) to open the Trello planning materials.
 
-## Object of the application
+## Object Of The Application
 In today's fast-paced world, it is essential to have reliable metrics to track and measure progress in various aspects of life. With a clear understanding of where improvements are needed, it becomes possible to initiate effective changes. This finance application is the perfect solution, empowering you to meticulously monitor your expenses and gain valuable insights into your spending habits.
 
 By providing a comprehensive overview of your financial landscape, this application enables you to identify areas that require adjustments and make informed decisions for a more secure financial future. Through data-driven analysis and intuitive visualizations, you can quickly pinpoint where your money is being spent and recognize patterns hindering your financial goals.
