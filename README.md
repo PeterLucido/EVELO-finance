@@ -1,6 +1,6 @@
 # E-VELO Finance Application
 
-<p align="center">
+<p {align="center"}>
 <img width="150" alt="logo" src="https://user-images.githubusercontent.com/127632779/234599864-abfebcc0-f9c4-4538-b730-47fbf4ec430f.png">
 </p>
 
