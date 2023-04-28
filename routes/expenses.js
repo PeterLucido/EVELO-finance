@@ -10,8 +10,8 @@ router.get('/:expenseId', isLoggedIn, expensesCtrl.show)
 router.get('/:expenseId/edit', isLoggedIn, expensesCtrl.edit)
 router.post('/create', isLoggedIn, expensesCtrl.create)
 router.post('/:expenseId/comments', isLoggedIn, expensesCtrl.createComments)
+router.put('/:expenseId', isLoggedIn, expensesCtrl.update)
 router.delete('/:expenseId', isLoggedIn, expensesCtrl.delete)
 router.delete('/:expenseId/comments/:commentId', isLoggedIn, expensesCtrl.deleteComments)
-router.put('/:expenseId', isLoggedIn, expensesCtrl.update)
 
 export { router }
